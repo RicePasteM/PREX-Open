@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PREX: Preserve, Reveal, Expand</title>
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎬</text></svg>">
+  <link rel="icon" type="image/png" href="icon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -153,6 +153,15 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-logo-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
     }
 
     .nav-links {
@@ -250,12 +259,25 @@
       text-align: center;
     }
 
+    .hero-icon {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 10px;
+      border-radius: 16px;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+      cursor: pointer;
+    }
+
+    .hero-icon:hover {
+      transform: scale(1.06);
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.25);
+      /* border: 1px solid rgba(16, 185, 129, 0.25); */
       border-radius: 100px;
       padding: 6px 16px;
       font-size: 0.82rem;
@@ -370,15 +392,29 @@
     /* Authors */
     .authors {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px 2px;
-      margin-bottom: 12px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
-    .authors span {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
+    .authors-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2px 8px;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+    }
+
+    .authors-row span {
+      color: var(--text-tertiary);
+    }
+
+    .authors sup {
+      font-size: 0.65rem;
+      color: var(--text-tertiary);
+      margin-left: 1px;
     }
 
     .authors a {
@@ -394,13 +430,37 @@
 
     .affiliations {
       text-align: center;
-      color: var(--text-tertiary);
-      font-size: 0.8rem;
-      line-height: 1.8;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-bottom: 6px;
     }
 
     .affiliations sup {
       font-size: 0.65rem;
+      color: var(--text-tertiary);
+    }
+
+    .affil-sep {
+      margin: 0 8px;
+      color: var(--text-tertiary);
+    }
+
+    .author-notes {
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+    }
+
+    .author-notes sup {
+      font-size: 0.6rem;
+    }
+
+    .author-email {
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 0.82rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
     }
 
     /* ============================================================
@@ -1165,12 +1225,13 @@
        ============================================================ -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">PREX</a>
+      <a href="#" class="nav-logo"><img src="icon.png" alt="" class="nav-logo-icon">PREX</a>
       <ul class="nav-links">
         <li><a href="#abstract">Abstract</a></li>
         <li><a href="#method">Method</a></li>
         <li><a href="#prebench">PREBench</a></li>
         <li><a href="#comparison">Results</a></li>
+        <li><a href="#scene-editor">Scene Editor</a></li>
         <li><a href="#citation">Citation</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -1184,10 +1245,7 @@
        ============================================================ -->
   <section class="hero" id="hero">
     <div class="container">
-      <div class="hero-badge">
-        <span class="dot"></span>
-        Anonymous Submission
-      </div>
+      <img src="icon.png" alt="PREX Icon" class="hero-icon">
 
       <h1 class="hero-title">
         Preserve<span class="gradient-text" style="background: linear-gradient(135deg, #10b981, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">·</span>Reveal<span class="gradient-text" style="background: linear-gradient(135deg, #ef4444, #f87171); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">·</span>Expand
@@ -1210,11 +1268,34 @@
 
       <!-- Authors -->
       <div class="authors">
-        <span>Anonymous Author(s)</span>
+        <div class="authors-row">
+          <strong style="font-weight:700;">Zhangchi Hu<sup>1,2</sup></strong><span>,</span>
+          <strong style="font-weight:700;">Wenzhang Sun<sup>2,&dagger;</sup></strong><span>,</span>
+          <strong style="font-weight:700;">Xiangchen Yin<sup>1</sup></strong><span>,</span>
+          <strong style="font-weight:700;">Jiahui Yuan<sup>1</sup></strong>
+        </div>
+        <div class="authors-row">
+          <strong style="font-weight:700;">Chunfeng Wang<sup>2</sup></strong><span>,</span>
+          <strong style="font-weight:700;">Hao Li<sup>2</sup></strong><span>,</span>
+          <strong style="font-weight:700;">Kun Zhan<sup>2</sup></strong><span>,</span>
+          <strong style="font-weight:700;">Xiaoyan Sun<sup>1,*</sup></strong>
+        </div>
       </div>
 
       <div class="affiliations">
-        <span>Affiliation · Address</span>
+        <span><sup>1</sup>University of Science and Technology of China</span>
+        <span class="affil-sep">·</span>
+        <span><sup>2</sup>Li Auto Inc.</span>
+      </div>
+
+      <div class="author-notes">
+        <span><sup>&dagger;</sup>Project leader</span>
+        <span class="affil-sep">·</span>
+        <span><sup>*</sup>Corresponding author</span>
+      </div>
+
+      <div class="author-email">
+        <span>huzhangchi@mail.ustc.edu.cn</span>
       </div>
 
       <!-- Teaser -->
@@ -1673,9 +1754,30 @@
   </section>
 
   <!-- ============================================================
+       Interactive Scene Editor
+       ============================================================ -->
+  <section id="scene-editor">
+    <div class="container">
+      <h2 class="section-title">Interactive Scene Editor</h2>
+
+      <!-- Description -->
+      <div class="abstract-card" style="margin-bottom: 32px;">
+        <p>
+          We built an <strong>interactive scene editor</strong> that enables users to intuitively explore and manipulate 4D scene representations. The editor provides real-time camera control, object selection, and region-aware editing capabilities — allowing researchers and artists to interact with the Preserve / Reveal / Expand framework in a visual, hands-on manner.
+        </p>
+      </div>
+
+      <!-- Demo Video -->
+      <div class="pipeline-wrap">
+        <video src="scene_sandbox.mp4" controls muted loop playsinline></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        Citation
        ============================================================ -->
-  <section id="citation">
+  <!-- <section id="citation">
     <div class="container">
       <h2 class="section-title">Citation</h2>
       <div class="citation-block">
@@ -1693,7 +1795,7 @@
 }</pre>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ============================================================
        Footer
