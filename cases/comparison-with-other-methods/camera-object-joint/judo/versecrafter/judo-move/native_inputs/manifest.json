@@ -1,0 +1,84 @@
+{
+  "scene_dir": "/mnt/volumes/base-tts-ali-sh-mix/huzhangchi/codes/videox-fun/uni4d/data_prepare/0504-prex-camera-object/finished/judo-move",
+  "scene_name": "judo-move",
+  "fused_asset": "/mnt/volumes/base-tts-ali-sh-mix/huzhangchi/codes/videox-fun/uni4d/data_prepare/0504-prex-camera-object/finished/judo-move/fused_4d_with_instances.npz",
+  "tracking_asset": "/mnt/volumes/base-tts-ali-sh-mix/huzhangchi/codes/videox-fun/uni4d/data_prepare/0504-prex-camera-object/finished/judo-move/aligned_tracking_points.npz",
+  "camera_pose_source": "/mnt/volumes/base-tts-ali-sh-mix/huzhangchi/codes/videox-fun/uni4d/data_prepare/0504-prex-camera-object/finished/judo-move/camera_trajectory.npz::edited_c2w",
+  "num_frames": 34,
+  "image_size": [
+    480,
+    720
+  ],
+  "gaussian_mode": "first_frame_shape",
+  "mean_source": "hybrid",
+  "mask_source": "projected",
+  "prompt_source": "",
+  "exported_object_ids": [
+    4304828,
+    6423644,
+    6550890,
+    10081607,
+    14802278,
+    15351475,
+    16094734
+  ],
+  "mask_entries": [
+    {
+      "slot": 0,
+      "object_id": 4304828,
+      "mask_name": "mask_000.png",
+      "mask_area": 4804,
+      "mask_source": "projected"
+    },
+    {
+      "slot": 1,
+      "object_id": 6423644,
+      "mask_name": "mask_001.png",
+      "mask_area": 8942,
+      "mask_source": "projected"
+    },
+    {
+      "slot": 2,
+      "object_id": 6550890,
+      "mask_name": "mask_002.png",
+      "mask_area": 5501,
+      "mask_source": "projected"
+    },
+    {
+      "slot": 3,
+      "object_id": 10081607,
+      "mask_name": "mask_003.png",
+      "mask_area": 5308,
+      "mask_source": "projected"
+    },
+    {
+      "slot": 4,
+      "object_id": 14802278,
+      "mask_name": "mask_004.png",
+      "mask_area": 24511,
+      "mask_source": "projected"
+    },
+    {
+      "slot": 5,
+      "object_id": 15351475,
+      "mask_name": "mask_005.png",
+      "mask_area": 23173,
+      "mask_source": "projected"
+    },
+    {
+      "slot": 6,
+      "object_id": 16094734,
+      "mask_name": "mask_006.png",
+      "mask_area": 7159,
+      "mask_source": "projected"
+    }
+  ],
+  "files": {
+    "first_frame": "0001.png",
+    "depth_intrinsics": "estimated_depth/depth_intrinsics.npz",
+    "mask_dir": "object_mask/masks",
+    "camera_trajectory": "camera_object_0/custom_camera_trajectory.npz",
+    "gaussian_trajectory": "camera_object_0/custom_3D_gaussian_trajectory.json",
+    "prompt": "prompt.txt"
+  }
+}
