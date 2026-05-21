@@ -7,6 +7,9 @@
   <a href="https://arxiv.org/abs/2605.20961">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2605.20961-red">
   </a>
+  <a href="https://ricepastem.github.io/PREX-Open/">
+    <img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-PREX-blue">
+  </a>
 </p>
 
 <p align="center">
