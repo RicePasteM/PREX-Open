@@ -48,11 +48,6 @@
 </p>
 
 <p align="center">
-  <b>📧 Corresponding author:</b>
-  <a href="mailto:huzhangchi@mail.ustc.edu.cn">huzhangchi@mail.ustc.edu.cn</a>
-</p>
-
-<p align="center">
 <strong>If you like our work, please give us a ⭐!</strong>
 </p>
 
